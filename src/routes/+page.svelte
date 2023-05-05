@@ -1,4 +1,6 @@
 <script>
+	import Terminal from "../components/Terminal.svelte";
+
 
 </script>
 
@@ -9,10 +11,10 @@
 
 
 <section>
-	<h1>Hello App</h1>
+	<h1>Hi, I'm Wesley</h1>
 
 	<div>
-		Hello World
+		<Terminal />
 	</div>
 </section>
 
