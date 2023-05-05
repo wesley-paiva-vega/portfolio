@@ -1,35 +1,34 @@
 <script lang="ts">
 	import ts_logo from '../images/ts_logo.jpg';
+	import Container from './Container.svelte';
 
-	let isScrollable = false;
+	export let isScrollable = false;
 
 	$: isScrollable;
 
-	const handleScroll = () => {
-		window.addEventListener('scroll', function() {
-  			console.log('Posição do scroll: ' + window.scrollY);
-	});
-	};
 </script>
 
-<header class={isScrollable ? `scroll` : null}>
-	<div on:scroll={handleScroll}>
-		<img width="30" src={ts_logo} alt="Logo Ts" />
-		<ul class="links">
-			<li>Sobre Mim</li>
-			<li>Artigos</li>
-			<li>Contato</li>
-		</ul>
-	</div>
+<header  class={isScrollable ? `scroll` : null}>
+	<Container>
+		<div>
+			<img width="30" src={ts_logo} alt="Logo Ts" />
+			<ul class="links">
+				<li>Sobre Mim</li>
+				<li>Artigos</li>
+				<li>Contato</li>
+			</ul>
+		</div>
+	</Container>
 </header>
 
 <style lang="scss">
 	header {
-		position: sticky;
+		position: fixed;
 		top: 0;
+		left: 0;
 		z-index: 3;
 		width: 100%;
-		background: #fff;
+		background: var(--color-bg-primary);
 		-webkit-transition: height 0.3s ease;
 		transition: height 0.3s ease;
 		div {
@@ -37,6 +36,7 @@
 			justify-content: space-between;
 			align-items: center;
 			padding: 0 50px;
+			height: 90px;
 
 			ul {
 				display: flex;
@@ -56,5 +56,11 @@
 	.scroll {
 		-webkit-box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
 		box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
+		background-color: var(--color-bg-secondary);
+
+		div {
+			height: 60px;
+			transition: height .3s ease;
+		}
 	}
 </style>

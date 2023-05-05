@@ -1,25 +1,39 @@
 <script>
+	import Container from '../components/Container.svelte';
 	import Header from '../components/Header.svelte';
 	import './styles.css';
+
+	let onScrollable = false;
+	let screenY = 0;
+
+	$: if(screenY >= 50) {
+		onScrollable = true;
+	}
+
+	$: if(screenY === 0) {
+		onScrollable = false
+	};
 </script>
 
-<div class="app">
-	<Header />
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<Container>
+	<Header isScrollable={onScrollable} />
+	<div class="app">	
+		<main>
+			<slot />
+		</main>	
+		<footer>
+			<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		</footer>
+	</div>
+</Container>
 
-	<main>
-		<slot />
-	</main>
-
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
-</div>
+<svelte:window bind:scrollY={screenY} />
 
 <style>
 	.app {
 		display: flex;
 		flex-direction: column;
-		min-height: 100vh;
 	}
 
 	main {
