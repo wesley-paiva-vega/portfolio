@@ -2,13 +2,33 @@
 	import ts_logo from '../images/ts_logo.jpg';
 	import Container from './Container.svelte';
 
+	import { createEventDispatcher } from 'svelte';
+
 	export let isScrollable = false;
+
+	export const onEdit = () => {
+		alert('Evente onEdit')
+	};
+	export const onDelete = () => {
+		alert('Evento onDelete')
+	};
+	export const onSave = () => {
+		alert('evento onSave')
+	};
 
 	$: isScrollable;
 
+	const dispath = createEventDispatcher()
+	
+	const dispathEvent = () => {
+		dispath('message');
+		console.log('event');
+	}
+
 </script>
 
-<header  class={isScrollable ? `scroll` : null}>
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<header on:click={dispathEvent}  class={isScrollable ? `scroll` : null}>
 	<Container>
 		<div>
 			<img width="30" src={ts_logo} alt="Logo Ts" />

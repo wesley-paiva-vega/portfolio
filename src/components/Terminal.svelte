@@ -7,9 +7,11 @@
     <header>
         dev.bash
     </header>
-    <div class="avatar">
-        My Foto here
-        <img width="100px" src={avatar} alt="my foto">
+    <div class="terminal">
+        <div class="avatar">
+            <img width="550px" src={avatar} alt="my foto">
+        </div>
+        <p>I'm an expert frontend engineer with experience in many different tools. Here you can check out my career in more detail.</p>
     </div>
 </div>
 
@@ -30,9 +32,19 @@
         }
     }
 
+    .terminal {
+        display: flex;
+        
+        background-color: red;
+    }
+
     .avatar {
-       img {
-        clip-path: 50%;
-       }
+        width: 200px;
+        padding-top: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: red;
+        clip-path: circle(45%);
     }
 </style>
