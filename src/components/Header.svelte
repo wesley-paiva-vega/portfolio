@@ -51,6 +51,7 @@
 
 	.links {
 		gap: 50px;
+		color: var(--color-theme-7);
 	}
 
 	.scroll {

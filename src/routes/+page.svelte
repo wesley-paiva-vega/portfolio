@@ -22,6 +22,10 @@
 	section {
 		margin-top: 50px;
 
+		h1 {
+			color: var(--color-theme-4);
+		}
+
 		div {
 			height: 200vh;
 		}
