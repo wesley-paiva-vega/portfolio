@@ -57,7 +57,7 @@
 	.scroll {
 		-webkit-box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
 		box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
-		background-color: var(--color-bg-secondary);
+		background-color: var(--color-bg-primary-dark);
 
 		div {
 			height: 60px;
