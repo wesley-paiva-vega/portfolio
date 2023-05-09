@@ -5,14 +5,12 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Wesley portifólio</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
 
 <section>
-	<h1>Hi, I'm Wesley</h1>
-
 	<div>
 		<Terminal />
 	</div>
@@ -21,11 +19,7 @@
 <style lang="scss">
 	section {
 		margin-top: 50px;
-
-		h1 {
-			color: var(--color-theme-4);
-		}
-
+		padding-top: 50px;
 		div {
 			height: 200vh;
 		}

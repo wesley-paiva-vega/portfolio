@@ -10,6 +10,7 @@
     <div class="avatar">
         <img width="400px" src={avatar} alt="my foto">
         <main class='text' >
+	    <h1>Hi, I'm Wesley</h1>
             <p>I'm a specialist
                 <span><strong>Front-End web developer</strong></span>,
                 with solid experience in the main <span class="green_text"><strong>frameworks on the market.</strong></span> Feel free to browse and discover my work.</p>
@@ -57,8 +58,14 @@
         align-self: flex-end;
         text-align: center;
         display: flex;
+        flex-direction: column;
         align-items: center;
         width: 50%;
+
+        h1 {
+            padding-right: 80px;
+            color: var(--color-theme-7);
+        }
 
             span {
                 color: var(--color-theme-4);
