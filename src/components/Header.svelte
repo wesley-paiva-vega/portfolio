@@ -13,9 +13,9 @@
 		<div>
 			<img width="30" src={ts_logo} alt="Logo Ts" />
 			<ul class="links">
-				<li>Sobre Mim</li>
-				<li>Artigos</li>
-				<li>Contato</li>
+				<li>About me</li>
+				<li>Articles</li>
+				<li>Contact</li>
 			</ul>
 		</div>
 	</Container>
@@ -51,7 +51,7 @@
 
 	.links {
 		gap: 50px;
-		color: var(--color-theme-7);
+		color: var(--color-bg-2);
 	}
 
 	.scroll {
