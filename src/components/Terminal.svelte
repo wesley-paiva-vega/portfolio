@@ -9,7 +9,7 @@
     </header>
     <div class="avatar">
         My Foto here
-        <img width="100px" src={avatar} alt="my foto">
+        <img width="400px" src={avatar} alt="my foto">
     </div>
 </div>
 
@@ -31,8 +31,9 @@
     }
 
     .avatar {
+        background-color: lightblue;
        img {
-        clip-path: 50%;
+        clip-path: ellipse(150px 150px at 50% 40%);
        }
     }
 </style>
